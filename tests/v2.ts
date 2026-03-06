@@ -2,7 +2,8 @@ import { assertEquals } from "https://deno.land/std@0.224.0/assert/assert_equals
 import { fail } from "https://deno.land/std@0.224.0/assert/fail.ts";
 import { format } from "@std/datetime";
 
-import { InMemoryAccountContext, RFC3339, v2 } from "@blowater/nostr-sdk";
+import { InMemoryAccountContext, RFC3339 } from "@blowater/nostr-sdk";
+import { ChannelCreation } from "@blowater/nostr-sdk/v2";
 import { run } from "../main.ts";
 
 const test_ctx = InMemoryAccountContext.Generate();
@@ -73,8 +74,8 @@ Deno.test({
             // get the channel
             const chan2 = await relay.get_channel_by_id(ChannelCreation_event.id);
             assertEquals(chan2, {
-                create: ChannelCreation_event as v2.ChannelCreation,
-                edit: event_edit as v2.ChannelEdition,
+                create: ChannelCreation_event as ChannelCreation,
+                edit: event_edit as ChannelEdition,
             });
         }
         await relay.shutdown();

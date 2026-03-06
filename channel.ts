@@ -1,5 +1,5 @@
-import { v2 } from "@blowater/nostr-sdk";
 import { DB, SqliteError } from "https://deno.land/x/sqlite@v3.9.1/mod.ts";
+import * as v2 from "@blowater/nostr-sdk/v2"
 
 export type func_GetChannelByName = (
     name: string,
@@ -13,7 +13,7 @@ export type func_CreateChannel = (event: v2.ChannelCreation) => Promise<boolean>
 export type func_EditChannel = (event: v2.ChannelEdition) => Promise<void | Error>;
 
 export function channel_creation_key(id: string) {
-    return ["event_v2", v2.Kind_V2.ChannelCreation, id];
+    return ["event_v2", ChannelCreation, id];
 }
 export function channel_edition_key(id: string) {
     return ["event_v2", v2.Kind_V2.ChannelEdition, id];

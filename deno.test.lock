@@ -3,7 +3,7 @@
   "specifiers": {
     "jsr:@blowater/collections@^0.0.0-rc1": "0.0.0-rc3",
     "jsr:@blowater/csp@1.0.0": "1.0.0",
-    "jsr:@blowater/nostr-sdk@^0.0.13": "0.0.13",
+    "jsr:@blowater/nostr-sdk@~0.1.5": "0.1.5",
     "jsr:@noble/secp256k1@2.1.0": "2.1.0",
     "jsr:@std/assert@0.226.0": "0.226.0",
     "jsr:@std/datetime@0.224.1": "0.224.1",
@@ -25,8 +25,8 @@
     "@blowater/csp@1.0.0": {
       "integrity": "415d4e8bf1656e4a508997fb8e725e9372e1e39b2b714afa76e86efd733f8c4c"
     },
-    "@blowater/nostr-sdk@0.0.13": {
-      "integrity": "0135d7f3ec6ce8c7e0ece2704c27dbb4ad2c5c7dfb0e5e1925c50cb1b117c3a7",
+    "@blowater/nostr-sdk@0.1.5": {
+      "integrity": "174ca894fe5f7592153dce9cd0679c34bc58a38510adf5162216d701b12bf7ce",
       "dependencies": [
         "jsr:@blowater/collections",
         "jsr:@blowater/csp",
@@ -274,7 +274,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@blowater/nostr-sdk@^0.0.13",
+      "jsr:@blowater/nostr-sdk@~0.1.5",
       "jsr:@std/datetime@~0.224.5",
       "npm:tailwindcss@3.4.1"
     ]
